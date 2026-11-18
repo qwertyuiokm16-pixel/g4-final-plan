@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>第 4 組期末分工</title>
+<style>
+html{-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+/* Layout: drawing title block on top, then a dated timeline table, then one panel per role, then the slide outline. */
+:root{
+  --bg:#f4f6f9; --panel:#ffffff; --ink:#1b2430; --muted:#5a6575; --line:#d6dce5; --accent:#1f5fa8; --due:#b42318;
+  --p1:#1f5fa8; --p2:#6b3fa0; --p3:#2f7d4f; --p4:#9a5b0b; --p5:#0f7480; --pall:#5a6575;
+  --font-body:"Noto Sans TC",-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#10151c; --panel:#18202a; --ink:#e5eaf1; --muted:#9ba7b6; --line:#2b3644; --accent:#86b5ee; --due:#f2897f;
+  --p1:#86b5ee; --p2:#c6a6ec; --p3:#80cb9e; --p4:#e9b66a; --p5:#6fcad3; --pall:#9ba7b6; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#10151c; --panel:#18202a; --ink:#e5eaf1; --muted:#9ba7b6; --line:#2b3644; --accent:#86b5ee; --due:#f2897f;
+  --p1:#86b5ee; --p2:#c6a6ec; --p3:#80cb9e; --p4:#e9b66a; --p5:#6fcad3; --pall:#9ba7b6; color-scheme:dark }
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.7}
+.wrap{max-width:960px;margin:0 auto;padding-block:24px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
+h1,h2,h3{text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:1.5rem;font-weight:700}
+h2{font-size:1.2rem;font-weight:700;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+h3{font-size:1.05rem;font-weight:700}
+p,ul{margin:0}
+ul{padding-left:1.2em;display:grid;gap:2px}
+.muted{color:var(--muted)}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+/* title block */
+.tb{border:2px solid var(--ink);background:var(--panel);display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.tb div{border:1px solid var(--line);padding:8px 12px;min-width:0}
+.tb .k{display:block;font-size:.72rem;letter-spacing:.06em;color:var(--muted)}
+.tb .v{font-weight:500}
+.tb .head{grid-column:1/-1;border-bottom:2px solid var(--ink)}
+.rules{display:grid;gap:6px;background:var(--panel);border:1px solid var(--line);padding:14px 16px}
+.due-list{display:grid;gap:6px}
+.due-list li{list-style:none}
+.due-list{padding:0}
+.badge{display:inline-block;font-size:.75rem;font-weight:700;padding:0 8px;border-radius:3px;border:1px solid currentColor;line-height:1.6;white-space:nowrap}
+.badge.due{color:var(--due)}
+/* chips */
+.chip{display:inline-block;min-width:1.9em;text-align:center;font-weight:700;border:1.5px solid currentColor;border-radius:999px;padding:0 6px;line-height:1.5;white-space:nowrap;font-size:.85rem}
+.c1{color:var(--p1)}.c2{color:var(--p2)}.c3{color:var(--p3)}.c4{color:var(--p4)}.c5{color:var(--p5)}.call{color:var(--pall)}.cdue{color:var(--due)}
+/* filter */
+.filter{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filter button{font:inherit;font-size:.9rem;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:4px 14px;cursor:pointer}
+.filter button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);font-weight:700}
+.filter button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* timeline */
+.tl-wrap{overflow-x:auto;background:var(--panel);border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{text-align:left;vertical-align:top;padding:8px 12px;border-bottom:1px solid var(--line)}
+th{font-size:.78rem;letter-spacing:.06em;color:var(--muted);font-weight:500}
+td.d{white-space:nowrap}
+tr.course td{background:color-mix(in srgb,var(--due) 8%,transparent)}
+tr.course td.t{color:var(--due);font-weight:700}
+.arrow{color:var(--muted)}
+/* roles */
+.roles{display:grid;gap:16px}
+.role{background:var(--panel);border:1px solid var(--line);padding:16px;display:grid;gap:10px;min-width:0}
+.role h3{display:flex;gap:10px;align-items:center}
+.step{display:grid;gap:4px}
+.step .when{font-weight:700}
+.outline{background:var(--panel);border:1px solid var(--line);padding:0;margin:0;list-style:none}
+.outline li{display:grid;grid-template-columns:2.2em 1fr;gap:4px 10px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.outline li:last-child{border-bottom:0}
+.outline .n{font-family:var(--font-mono);color:var(--muted)}
+.outline b{font-weight:700}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header style="display:grid;gap:14px">
+    <div class="tb" role="group" aria-label="專題資訊">
+      <div class="head"><span class="k">工程名稱</span><h1>工程圖學期末 Revit 專題：完整分工與時間線</h1></div>
+      <div><span class="k">組別</span><span class="v">第 4 組</span></div>
+      <div><span class="k">建物</span><span class="v">園藝花卉研究室（AT2048）</span></div>
+      <div><span class="k">範圍</span><span class="v">地上四層，地下室不建模</span></div>
+      <div><span class="k">版本日期</span><span class="v mono">2026-11-18</span></div>
+    </div>
+    <div class="rules">
+      <p>以下時間均為 2026 年、台北時間；「X月X日 23:59 前」即當天結束前。</p>
+      <p>「交付」統一定義為：將指定檔案傳到小組群組，讓②及後續需要使用的人可以下載、開啟。</p>
+      <p>每人交一份自己的工作 PDF，完整說明工作、成果、AI 使用及驗證情況；後續需要訂正時，更新同一份 PDF。</p>
+      <p>全員從今天起就記錄自己的 AI 使用（用了什麼工具、問了什麼、哪些採用／修改／捨棄、怎樣驗證），簡報最後一頁要用。</p>
+      <p>全員用 Revit 2023。新版存的 rvt 舊版開不了，所以不要用比 2023 新的版本存檔。①須能穩定使用 Revit；⑤也須能開啟 Revit，以核對模型。</p>
+    </div>
+    <ul class="due-list">
+      <li><span class="badge due">課程期限</span> <span class="mono">11/20（五）17:00</span> 期末進度報告（小組），交 FinalProgress_Group4.pdf，不收遲交</li>
+      <li><span class="badge due">課程期限</span> <span class="mono">12/17（四）23:59</span> 上傳 NTU COOL：rvt、2D 圖說 PDF、計算 PDF、簡報（pptx／pdf）</li>
+      <li><span class="badge due">課程期限</span> <span class="mono">12/18（五）</span> 上台 6 分鐘＋Q&amp;A</li>
+    </ul>
+  </header>
+
+  <section style="display:grid;gap:12px" aria-labelledby="tl-h">
+    <h2 id="tl-h">時間線</h2>
+    <div class="filter" role="group" aria-label="只看某人的工作">
+      <span class="muted">只看：</span>
+      <button type="button" id="f-all" data-f="all" aria-pressed="true">全部</button>
+      <button type="button" id="f-1" data-f="1" aria-pressed="false">①</button>
+      <button type="button" id="f-2" data-f="2" aria-pressed="false">②</button>
+      <button type="button" id="f-3" data-f="3" aria-pressed="false">③</button>
+      <button type="button" id="f-4" data-f="4" aria-pressed="false">④</button>
+      <button type="button" id="f-5" data-f="5" aria-pressed="false">⑤</button>
+    </div>
+    <div class="tl-wrap">
+      <table>
+        <thead><tr><th scope="col">日期</th><th scope="col">時間</th><th scope="col">誰</th><th scope="col">做什麼 → 交給誰</th></tr></thead>
+        <tbody id="tl">
+          <tr data-who="1 2 3 4 5"><td class="d mono">11/18（三）起</td><td class="t mono"></td><td><span class="chip call">全員</span></td><td>記錄 AI 使用；全員用 Revit 2023</td></tr>
+          <tr data-who="1"><td class="d mono">11/19（四）</td><td class="t mono">23:59</td><td><span class="chip c1">①</span></td><td>進度報告 PDF＋rvt <span class="arrow">→</span> ②</td></tr>
+          <tr data-who="2"><td class="d mono">11/20（五）</td><td class="t mono">17:00 前</td><td><span class="chip c2">②</span></td><td>上傳 FinalProgress_Group4.pdf 並回查</td></tr>
+          <tr class="course" data-who="course"><td class="d mono">11/20（五）</td><td class="t mono">17:00</td><td><span class="chip cdue">課程</span></td><td>期末進度報告截止，不收遲交</td></tr>
+          <tr data-who="5"><td class="d mono">11/21（六）</td><td class="t mono">12:00</td><td><span class="chip c5">⑤</span></td><td>圖面資料表 <span class="arrow">→</span> ①④</td></tr>
+          <tr data-who="4"><td class="d mono">11/22（日）</td><td class="t mono">23:59</td><td><span class="chip c4">④</span></td><td>現況調查包＋工作 PDF 第一版 <span class="arrow">→</span> ①⑤②</td></tr>
+          <tr data-who="3"><td class="d mono">11/25（三）</td><td class="t mono">23:59</td><td><span class="chip c3">③</span></td><td>回報計算資料準備情況</td></tr>
+          <tr data-who="1"><td class="d mono">11/26（四）</td><td class="t mono">23:59</td><td><span class="chip c1">①</span></td><td>階段一模型 <span class="arrow">→</span> ⑤</td></tr>
+          <tr data-who="5"><td class="d mono">11/28（六）</td><td class="t mono">23:59</td><td><span class="chip c5">⑤</span></td><td>階段一檢查結果 <span class="arrow">→</span> ①</td></tr>
+          <tr data-who="1"><td class="d mono">12/3（四）</td><td class="t mono">23:59</td><td><span class="chip c1">①</span></td><td>完整模型 v1＋明細表初版 <span class="arrow">→</span> ③④⑤②</td></tr>
+          <tr data-who="5"><td class="d mono">12/6（日）</td><td class="t mono">23:59</td><td><span class="chip c5">⑤</span></td><td>v1 問題清單 <span class="arrow">→</span> ①</td></tr>
+          <tr data-who="1"><td class="d mono">12/9（三）</td><td class="t mono">23:59</td><td><span class="chip c1">①</span></td><td>模型 v2＋2D 圖說 PDF＋最終明細表＋3D 截圖＋工作 PDF <span class="arrow">→</span> ③④⑤②</td></tr>
+          <tr data-who="3"><td class="d mono">12/10（四）</td><td class="t mono">23:59</td><td><span class="chip c3">③</span></td><td>計算 PDF＋工作 PDF <span class="arrow">→</span> ②④⑤</td></tr>
+          <tr data-who="5"><td class="d mono">12/11（五）</td><td class="t mono">23:59</td><td><span class="chip c5">⑤</span></td><td>v2、2D 圖說、計算的核對結果＋工作 PDF <span class="arrow">→</span> ②④；問題交回①③</td></tr>
+          <tr data-who="1 3"><td class="d mono">12/12（六）</td><td class="t mono">23:59</td><td><span class="chip c1">①</span> <span class="chip c3">③</span></td><td>修正版 <span class="arrow">→</span> ⑤</td></tr>
+          <tr data-who="4"><td class="d mono">12/13（日）</td><td class="t mono">23:59</td><td><span class="chip c4">④</span></td><td>可編輯 PPT＋工作 PDF <span class="arrow">→</span> ②⑤</td></tr>
+          <tr data-who="2"><td class="d mono">12/14（一）</td><td class="t mono">23:59</td><td><span class="chip c2">②</span></td><td>準備上傳的全部檔案 <span class="arrow">→</span> ⑤</td></tr>
+          <tr data-who="5"><td class="d mono">12/15（二）</td><td class="t mono">23:59</td><td><span class="chip c5">⑤</span></td><td>最後核對結果 <span class="arrow">→</span> 各負責者</td></tr>
+          <tr data-who="1 2 3 4 5"><td class="d mono">12/16（三）</td><td class="t mono">18:00</td><td><span class="chip call">各負責者</span></td><td>修正完成，⑤複核後回覆②</td></tr>
+          <tr data-who="2"><td class="d mono">12/16（三）</td><td class="t mono">23:59</td><td><span class="chip c2">②</span></td><td>上傳 NTU COOL 並回查（12/17 留作補救）</td></tr>
+          <tr class="course" data-who="course"><td class="d mono">12/17（四）</td><td class="t mono">23:59</td><td><span class="chip cdue">課程</span></td><td>上傳截止：rvt、2D 圖說 PDF、計算 PDF、簡報</td></tr>
+          <tr class="course" data-who="2 course"><td class="d mono">12/18（五）</td><td class="t mono"></td><td><span class="chip c2">②</span></td><td>上台 6 分鐘＋Q&amp;A</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:14px" aria-labelledby="roles-h">
+    <h2 id="roles-h">各人分工</h2>
+    <div class="roles">
+
+      <article class="role" id="r1">
+        <h3><span class="chip c1">①</span>Revit 建模、2D 圖說及明細表</h3>
+        <p>Revit 內的工作集中由①完成。依 A2-1（1F～4F 平面）、A2-2（只用屋頂平面）、⑤的圖面資料表及④的現況調查建模；地下室不做。</p>
+        <div class="step"><p class="when">11月19日（四）23:59 前，交付期末進度報告 PDF 及 rvt 給②</p>
+          <ul>
+            <li>用 Revit 2023 建檔</li>
+            <li>把 A2-1 的 1F～4F 平面、A2-2 的屋頂平面裁出，匯入對應樓層當底圖，用一段已知的軸線尺寸校正比例</li>
+            <li>軸線 1～6／A～D；樓層 1F～4F、RF。樓高還沒量，先用估計值，並在 PDF 註明「估計，待現場量測更新」</li>
+            <li>各層平面視圖；地形照 Lab-HW4 的做法。圖上沒有基地方位與高程，正北方向與地形先參考課程網站的校園 ArcGIS 場景及現場，並在 PDF 註明</li>
+            <li>PDF 至少包含：各層平面（看得到軸線）、一張立面或剖面（看得到樓層線）、一張看得到地形的 3D 或基地圖</li>
+            <li>這份 rvt 就是之後的模型主檔</li>
+          </ul></div>
+        <div class="step"><p class="when">11月26日（四）23:59 前，交付「階段一模型」給⑤</p>
+          <p>在主檔上依④的現況調查更新樓高，並加上柱、樑、樓板、牆。尚未量到的尺寸先用估計值，並在工作 PDF 標明。</p></div>
+        <div class="step"><p class="when">12月3日（四）23:59 前，交付「完整模型 v1」給③④⑤②</p>
+          <ul>
+            <li>外牆門窗（依平面圖代號，開口尺寸要符合實際）</li>
+            <li>屋頂、天花板</li>
+            <li>外觀細部：雨遮、外凸窗、入口台階與欄杆、女兒牆、屋突、4F 溫室的玻璃與屋頂</li>
+            <li>內牆及房間（供面積與 EUI 計算）</li>
+            <li>每個構件都設定正確材料；柱、樑用結構類別</li>
+            <li>匯出材料數量明細表、房間面積明細表（Excel）初版</li>
+          </ul>
+          <p class="muted">樓梯是加分項，主體完成後再做。</p></div>
+        <div class="step"><p class="when">12月9日（三）23:59 前，依⑤的問題清單修正，交付給③④⑤②</p>
+          <ul>
+            <li>模型 v2</li>
+            <li>2D 圖說 PDF：各層結構平面圖、四向立面圖、看得到內部結構框架的剖面圖</li>
+            <li>最終明細表（Excel）</li>
+            <li>3D 截圖：外觀至少 2 張、結構剖切 1 張</li>
+            <li>本人的工作 PDF：依據哪些圖與量測、哪些尺寸是估計、修改了哪些地方，以及 AI 使用與驗證情況</li>
+          </ul>
+          <p>⑤指出模型問題時，由①修正並交回⑤複驗。</p></div>
+      </article>
+
+      <article class="role" id="r2">
+        <h3><span class="chip c2">②</span>統籌、最終整合、上傳及上台</h3>
+        <div class="step"><p class="when">有機會時向助教確認以下問題，收到答覆就貼群組</p>
+          <ul>
+            <li>地下室不建模，但官方總樓地板面積 1381.301 m² 看起來含地下室（圖上地下室算式為 382.33 m²），EUI 計算要用哪個面積</li>
+            <li>公式裡各空間的 EUI 值要用哪個來源</li>
+            <li>軸線是否必須和 TW97 座標對齊</li>
+            <li>NTU COOL 上傳檔案大小有沒有上限</li>
+          </ul>
+          <p>同週向助教或總務處營繕組詢問：是否有這棟的全套圖（目前只有 23 張中的 2 張），特別是立面、剖面、結構圖、門窗表。拿得到就能省下大部分現場量測。</p></div>
+        <div class="step"><p class="when">11月20日（五）17:00 前（課程期限）</p>
+          <p>收到①的進度報告後，上傳 FinalProgress_Group4.pdf，並回查上傳成功。</p></div>
+        <div class="step"><p class="when">全程</p>
+          <ul>
+            <li>每週看一次 NTU COOL 公告與檔案，確認有沒有新的要求</li>
+            <li>收到①③⑤的資料及④的 PPT、工作 PDF 後，負責整合各人的工作 PDF，並由定稿 PPT 輸出正式簡報 PDF</li>
+          </ul></div>
+        <div class="step"><p class="when">12月14日（一）23:59 前</p>
+          <p>把準備上傳的 rvt、2D 圖說 PDF、計算 PDF、PPT 及簡報 PDF 交給⑤核對。收到⑤的檢查結果後，對應負責者完成修正，⑤再核對修正版。</p></div>
+        <div class="step"><p class="when">12月16日（三）23:59 前</p>
+          <p>完成上傳 NTU COOL 及上傳成功回查（重新下載並開啟每個檔）。比課程期限早一天，12月17日留作補救。rvt 能否重開由⑤確認。</p></div>
+        <div class="step"><p class="when">12月18日（五）</p>
+          <p>上台呈現 6 分鐘；自己計時練習，控制在 6 分鐘內。</p></div>
+      </article>
+
+      <article class="role" id="r3">
+        <h3><span class="chip c3">③</span>用電、EUI 與碳排計算，及節能建議</h3>
+        <div class="step"><p class="when">11月25日（三）23:59 前，在群組回報準備情況</p>
+          <ul>
+            <li>實際用電資料：課程網站 Step 4 的「各月用電資料及EUI」資料夾（113 年表已有「M63 園藝花卉研究室」逐月用電），或台大智慧電表 epower.cloud.ntu.edu.tw（要用台大 WiFi 或 VPN）；並確認這個電號涵蓋哪些範圍（是否含地下室）</li>
+            <li>BERS 手冊與 EUI 基準範本、建材碳足跡係數的來源（課程網站 Step 4 都有連結）</li>
+            <li>用 A2-1、A2-2 圖上的面積算式，核對官方總樓地板面積 1381.301 m²（注意是否含地下室 382.33 m²）</li>
+          </ul>
+          <p>收到①的 v1 明細表後先建好計算表，12月9日拿到最終明細表再更新數字。</p></div>
+        <div class="step"><p class="when">12月10日（四）23:59 前，交付「計算 PDF」及本人的工作 PDF 給②④⑤</p>
+          <ul>
+            <li>材料數量（依①的明細表）</li>
+            <li>總樓地板面積及 EUI 法年用電估算（各空間 EUI × 面積，再加總）</li>
+            <li>與實際用電比較，並說明差異原因</li>
+            <li>節能建議</li>
+            <li>加分：隱含碳（材料數量 × 碳足跡係數；鋼筋沒有建模，要估算並寫明方法）、BERS EUI 基準比較</li>
+          </ul>
+          <p>須交代資料來源、假設及限制。⑤指出計算問題時，由③修正並交回⑤複驗。</p></div>
+      </article>
+
+      <article class="role" id="r4">
+        <h3><span class="chip c4">④</span>現況調查及 PPT 製作</h3>
+        <p>建物建於 1990 年，官方清單註明立面、結構、門窗圖都缺；依課程建模準則，圖說超過兩年須現場勘察。</p>
+        <div class="step"><p class="when">11月22日（日）23:59 前，交付「現況調查包」給①⑤②</p>
+          <ul>
+            <li>四向立面照片（盡量正對拍）；能到的話，加拍屋頂；記下建物的正北方向</li>
+            <li>外觀細部：雨遮、外凸窗、入口台階與欄杆、女兒牆、屋突，拍照並量主要尺寸</li>
+            <li>各層樓高（量測，或數階梯級數 × 級高）</li>
+            <li>門窗：依⑤圖面資料表的代號清單（W1、W2、D1…）逐一量寬、高、窗台高；外牆門窗必量</li>
+            <li>外露的柱、樑尺寸，外牆材料</li>
+            <li>與平面圖不同的地方（加建、拆除、4F 溫室現況），以及房間名稱與用途現況（例如恆溫培養室，會影響 EUI）</li>
+            <li>每項記下量測位置與方法；進館內量測前，先徵得研究室同意</li>
+          </ul>
+          <p>照片與尺寸表（Excel）放同一資料夾交付，本人的工作 PDF 先交第一版。</p></div>
+        <div class="step"><p class="when">12月3日起</p>
+          <p>收到①的 v1 後，先完成已有資料的 PPT 部分，並保留計算、驗證及紀錄的位置。</p></div>
+        <div class="step"><p class="when">12月13日（日）23:59 前</p>
+          <p>依下方固定目錄完成「可編輯 PPT」，連同本人的工作 PDF 交給②，並同步提供⑤核對。課程沒有要求影片，這次不做影片。</p></div>
+      </article>
+
+      <article class="role" id="r5">
+        <h3><span class="chip c5">⑤</span>模型驗證、計算重算、最後一致性檢查及答辩準備</h3>
+        <p>發現問題時，須指出具體位置、問題內容及判斷依據，交回負責者修正，再核對修正版。</p>
+        <ul>
+          <li><b>11月21日（六）12:00 前：</b>交付「圖面資料表」給①④：從 A2-1、A2-2 抄出軸線間距、牆厚、柱尺寸、各層門窗代號與位置、房間名稱與編號、各層面積算式；看不清楚的數字另外標出。之後核對模型時，以這份表對照①的模型</li>
+          <li><b>11月28日（六）23:59 前：</b>檢查階段一模型的樓高、柱位、樑、樓板、牆是否符合圖說及④的現況調查；問題交回①</li>
+          <li><b>12月6日（日）23:59 前：</b>核對模型 v1 是否符合圖說及④的現況調查；另外檢查每個構件都有指定材料（沒有停在預設值），柱、樑用的是結構類別（否則結構平面圖和明細表抓不到）；問題清單交回①</li>
+          <li><b>12月11日（五）23:59 前：</b>核對模型 v2 及 2D 圖說（結構平面、立面、剖面是否齊全），並重算③的主要數字（總樓地板面積、EUI、年用電、材料總量）；問題交回①③，①③在 12月12日（六）23:59 前交修正版。同日把本人的工作 PDF 交給②④，內容包含驗證方法、結果、問題與修正情況、AI 使用與驗證紀錄，以及可能被問的問題和有依據的答覆</li>
+          <li><b>12月15日（二）23:59 前：</b>收到②準備上傳的檔案後，檢查 rvt 能否重開，以及模型、2D 圖說、計算 PDF、PPT 的數字與圖是否一致；問題交回對應負責者，在 12月16日（三）18:00 前完成修正並由⑤複核，回覆②。更新同一份工作 PDF，保留最後檢查結果</li>
+        </ul>
+        <p class="muted">12月11日交付不代表⑤全部工作結束；④的 PPT 及②的最終整合尚未完成，⑤不能提前聲稱已核對。⑤只負責答辩準備，不另安排彩排、計時或現場播放。</p>
+      </article>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:12px" aria-labelledby="ppt-h">
+    <h2 id="ppt-h">PPT 目錄（④依此順序製作，6 分鐘）</h2>
+    <ol class="outline">
+      <li><span class="n">1</span><span><b>專題名稱、建物與範圍</b><br>園藝花卉研究室（AT2048）、1990 年建、地上四層（地下室不建模）、官方總樓地板面積 1381.301 m²（含地下室與否待確認）。</span></li>
+      <li><span class="n">2</span><span><b>資料來源與現況調查</b><br>官方只有平面圖；如何補齊立面、結構、門窗；與圖不同的地方。使用④①⑤的資料。</span></li>
+      <li><span class="n">3</span><span><b>Revit 模型</b><br>整體 3D、樓層、柱樑牆板、門窗、屋頂、外觀細部、房間。使用①的資料。</span></li>
+      <li><span class="n">4</span><span><b>2D 圖說</b><br>結構平面、立面、剖面。使用①的資料。</span></li>
+      <li><span class="n">5</span><span><b>材料數量與隱含碳</b><br>使用③的資料。</span></li>
+      <li><span class="n">6</span><span><b>樓地板面積、EUI 與實際用電比較</b><br>估算方法、與實際的差異及原因、BERS 基準比較。使用③的資料。</span></li>
+      <li><span class="n">7</span><span><b>節能建議</b><br>使用③的資料。</span></li>
+      <li><span class="n">8</span><span><b>模型驗證與限制</b><br>驗證方法、發現及修正的問題、仍存在的限制。使用⑤的資料。</span></li>
+      <li><span class="n">9</span><span><b>各人實際貢獻、AI使用及驗證——最後一頁</b><br>如實整理五人的貢獻、AI 用途、採用／修改／捨棄的內容、驗證方式及遇到的限制或錯誤。最後整合時須更新實際完成情況，不把原定任務直接當成已完成成果。</span></li>
+    </ol>
+  </section>
+</div>
+
+<script>
+(function(){
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#tl tr'));
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.filter button'));
+  function apply(f){
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.f === f)); });
+    rows.forEach(function(r){
+      var who = (r.dataset.who || '').split(' ');
+      r.hidden = !(f === 'all' || who.indexOf(f) !== -1 || who.indexOf('course') !== -1);
+    });
+    try { localStorage.setItem('g4-filter', f); } catch(e) {}
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ apply(b.dataset.f); }); });
+  var saved = 'all';
+  try { saved = localStorage.getItem('g4-filter') || 'all'; } catch(e) {}
+  if (['all','1','2','3','4','5'].indexOf(saved) === -1) saved = 'all';
+  apply(saved);
+})();
+</script>
+
+</body>
+</html>
