@@ -88,7 +88,7 @@ tr.course td.t{color:var(--due);font-weight:700}
       <div class="head"><span class="k">工程名稱</span><h1>工程圖學期末 Revit 專題：完整分工與時間線</h1></div>
       <div><span class="k">組別</span><span class="v">第 4 組</span></div>
       <div><span class="k">建物</span><span class="v">園藝花卉研究室（AT2048）</span></div>
-      <div><span class="k">範圍</span><span class="v">地上四層，地下室不建模</span></div>
+      <div><span class="k">範圍</span><span class="v">地下一層、地上四層</span></div>
       <div><span class="k">版本日期</span><span class="v mono">2026-11-18</span></div>
     </div>
     <div class="rules">
@@ -121,7 +121,7 @@ tr.course td.t{color:var(--due);font-weight:700}
         <thead><tr><th scope="col">日期</th><th scope="col">時間</th><th scope="col">誰</th><th scope="col">做什麼 → 交給誰</th></tr></thead>
         <tbody id="tl">
           <tr data-who="1 2 3 4 5"><td class="d mono">11/18（三）起</td><td class="t mono"></td><td><span class="chip call">全員</span></td><td>記錄 AI 使用；全員用 Revit 2023</td></tr>
-          <tr data-who="1"><td class="d mono">11/19（四）</td><td class="t mono">23:59</td><td><span class="chip c1">①</span></td><td>進度報告 PDF＋rvt <span class="arrow">→</span> ②</td></tr>
+          <tr data-who="2"><td class="d mono">11/19（四）</td><td class="t mono">23:59</td><td><span class="chip c2">②</span></td><td>完成進度報告 PDF＋rvt；rvt 交①當主檔</td></tr>
           <tr data-who="2"><td class="d mono">11/20（五）</td><td class="t mono">17:00 前</td><td><span class="chip c2">②</span></td><td>上傳 FinalProgress_Group4.pdf 並回查</td></tr>
           <tr class="course" data-who="course"><td class="d mono">11/20（五）</td><td class="t mono">17:00</td><td><span class="chip cdue">課程</span></td><td>期末進度報告截止，不收遲交</td></tr>
           <tr data-who="5"><td class="d mono">11/21（六）</td><td class="t mono">12:00</td><td><span class="chip c5">⑤</span></td><td>圖面資料表 <span class="arrow">→</span> ①④</td></tr>
@@ -153,16 +153,9 @@ tr.course td.t{color:var(--due);font-weight:700}
 
       <article class="role" id="r1">
         <h3><span class="chip c1">①</span>Revit 建模、2D 圖說及明細表</h3>
-        <p>Revit 內的工作集中由①完成。依 A2-1（1F～4F 平面）、A2-2（只用屋頂平面）、⑤的圖面資料表及④的現況調查建模；地下室不做。</p>
-        <div class="step"><p class="when">11月19日（四）23:59 前，交付期末進度報告 PDF 及 rvt 給②</p>
-          <ul>
-            <li>用 Revit 2023 建檔</li>
-            <li>把 A2-1 的 1F～4F 平面、A2-2 的屋頂平面裁出，匯入對應樓層當底圖，用一段已知的軸線尺寸校正比例</li>
-            <li>軸線 1～6／A～D；樓層 1F～4F、RF。樓高還沒量，先用估計值，並在 PDF 註明「估計，待現場量測更新」</li>
-            <li>各層平面視圖；地形照 Lab-HW4 的做法。圖上沒有基地方位與高程，正北方向與地形先參考課程網站的校園 ArcGIS 場景及現場，並在 PDF 註明</li>
-            <li>PDF 至少包含：各層平面（看得到軸線）、一張立面或剖面（看得到樓層線）、一張看得到地形的 3D 或基地圖</li>
-            <li>這份 rvt 就是之後的模型主檔</li>
-          </ul></div>
+        <p>Revit 內的工作集中由①完成。依 A2-1（1F～4F 平面）、A2-2（地下室與屋頂平面）、⑤的圖面資料表及④的現況調查建模。</p>
+        <div class="step"><p class="when">11月20日（五）起</p>
+          <p>接手②做好的進度報告 rvt 當模型主檔，繼續建模。</p></div>
         <div class="step"><p class="when">11月26日（四）23:59 前，交付「階段一模型」給⑤</p>
           <p>在主檔上依④的現況調查更新樓高，並加上柱、樑、樓板、牆。尚未量到的尺寸先用估計值，並在工作 PDF 標明。</p></div>
         <div class="step"><p class="when">12月3日（四）23:59 前，交付「完整模型 v1」給③④⑤②</p>
@@ -188,16 +181,24 @@ tr.course td.t{color:var(--due);font-weight:700}
 
       <article class="role" id="r2">
         <h3><span class="chip c2">②</span>統籌、最終整合、上傳及上台</h3>
+        <div class="step"><p class="when">11月19日（四）23:59 前，完成期末進度報告 PDF 及 rvt</p>
+          <ul>
+            <li>用 Revit 2023 建檔</li>
+            <li>把 A2-1 的 1F～4F 平面、A2-2 的地下室與屋頂平面裁出，匯入對應樓層當底圖，用一段已知的軸線尺寸校正比例</li>
+            <li>軸線 1～6／A～D；樓層 B1、1F～4F、RF。B1 到 1F 為 300 cm（A2-2 剖面）；1F 以上的樓高還沒量，先用估計值，並在 PDF 註明「估計，待現場量測更新」</li>
+            <li>各層平面視圖；地形照 Lab-HW4 的做法。圖上沒有基地方位與高程，正北方向與地形先參考課程網站的校園 ArcGIS 場景及現場，並在 PDF 註明</li>
+            <li>PDF 至少包含：各層平面（看得到軸線）、一張立面或剖面（看得到樓層線）、一張看得到地形的 3D 或基地圖</li>
+            <li>這份 rvt 交給①，當之後的模型主檔</li>
+          </ul></div>
         <div class="step"><p class="when">有機會時向助教確認以下問題，收到答覆就貼群組</p>
           <ul>
-            <li>地下室不建模，但官方總樓地板面積 1381.301 m² 看起來含地下室（圖上地下室算式為 382.33 m²），EUI 計算要用哪個面積</li>
             <li>公式裡各空間的 EUI 值要用哪個來源</li>
             <li>軸線是否必須和 TW97 座標對齊</li>
             <li>NTU COOL 上傳檔案大小有沒有上限</li>
           </ul>
           <p>同週向助教或總務處營繕組詢問：是否有這棟的全套圖（目前只有 23 張中的 2 張），特別是立面、剖面、結構圖、門窗表。拿得到就能省下大部分現場量測。</p></div>
         <div class="step"><p class="when">11月20日（五）17:00 前（課程期限）</p>
-          <p>收到①的進度報告後，上傳 FinalProgress_Group4.pdf，並回查上傳成功。</p></div>
+          <p>上傳 FinalProgress_Group4.pdf，並回查上傳成功。</p></div>
         <div class="step"><p class="when">全程</p>
           <ul>
             <li>每週看一次 NTU COOL 公告與檔案，確認有沒有新的要求</li>
@@ -217,7 +218,7 @@ tr.course td.t{color:var(--due);font-weight:700}
           <ul>
             <li>實際用電資料：課程網站 Step 4 的「各月用電資料及EUI」資料夾（113 年表已有「M63 園藝花卉研究室」逐月用電），或台大智慧電表 epower.cloud.ntu.edu.tw（要用台大 WiFi 或 VPN）；並確認這個電號涵蓋哪些範圍（是否含地下室）</li>
             <li>BERS 手冊與 EUI 基準範本、建材碳足跡係數的來源（課程網站 Step 4 都有連結）</li>
-            <li>用 A2-1、A2-2 圖上的面積算式，核對官方總樓地板面積 1381.301 m²（注意是否含地下室 382.33 m²）</li>
+            <li>用 A2-1、A2-2 圖上的面積算式，核對官方總樓地板面積 1381.301 m²</li>
           </ul>
           <p>收到①的 v1 明細表後先建好計算表，12月9日拿到最終明細表再更新數字。</p></div>
         <div class="step"><p class="when">12月10日（四）23:59 前，交付「計算 PDF」及本人的工作 PDF 給②④⑤</p>
@@ -269,7 +270,7 @@ tr.course td.t{color:var(--due);font-weight:700}
   <section style="display:grid;gap:12px" aria-labelledby="ppt-h">
     <h2 id="ppt-h">PPT 目錄（④依此順序製作，6 分鐘）</h2>
     <ol class="outline">
-      <li><span class="n">1</span><span><b>專題名稱、建物與範圍</b><br>園藝花卉研究室（AT2048）、1990 年建、地上四層（地下室不建模）、官方總樓地板面積 1381.301 m²（含地下室與否待確認）。</span></li>
+      <li><span class="n">1</span><span><b>專題名稱、建物與範圍</b><br>園藝花卉研究室（AT2048）、1990 年建、地下一層、地上四層、官方總樓地板面積 1381.301 m²。</span></li>
       <li><span class="n">2</span><span><b>資料來源與現況調查</b><br>官方只有平面圖；如何補齊立面、結構、門窗；與圖不同的地方。使用④①⑤的資料。</span></li>
       <li><span class="n">3</span><span><b>Revit 模型</b><br>整體 3D、樓層、柱樑牆板、門窗、屋頂、外觀細部、房間。使用①的資料。</span></li>
       <li><span class="n">4</span><span><b>2D 圖說</b><br>結構平面、立面、剖面。使用①的資料。</span></li>
