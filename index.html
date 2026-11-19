@@ -96,7 +96,7 @@ tr.course td.t{color:var(--due);font-weight:700}
       <p>「交付」統一定義為：將指定檔案傳到小組群組，讓②及後續需要使用的人可以下載、開啟。</p>
       <p>每人交一份自己的工作 PDF，完整說明工作、成果、AI 使用及驗證情況；後續需要訂正時，更新同一份 PDF。</p>
       <p>全員從今天起就記錄自己的 AI 使用（用了什麼工具、問了什麼、哪些採用／修改／捨棄、怎樣驗證），簡報最後一頁要用。</p>
-      <p>全員用 Revit 2023。新版存的 rvt 舊版開不了，所以不要用比 2023 新的版本存檔。①須能穩定使用 Revit；⑤也須能開啟 Revit，以核對模型。</p>
+      <p>全員用 Revit 2024（vlab 電腦沒有 2023）。新版存的 rvt 舊版開不了，所以不要用比 2024 新的版本存檔。①須能穩定使用 Revit；⑤也須能開啟 Revit，以核對模型。</p>
     </div>
     <ul class="due-list">
       <li><span class="badge due">課程期限</span> <span class="mono">11/20（五）17:00</span> 期末進度報告（小組），交 FinalProgress_Group4.pdf，不收遲交</li>
@@ -120,8 +120,8 @@ tr.course td.t{color:var(--due);font-weight:700}
       <table>
         <thead><tr><th scope="col">日期</th><th scope="col">時間</th><th scope="col">誰</th><th scope="col">做什麼 → 交給誰</th></tr></thead>
         <tbody id="tl">
-          <tr data-who="1 2 3 4 5"><td class="d mono">11/18（三）起</td><td class="t mono"></td><td><span class="chip call">全員</span></td><td>記錄 AI 使用；全員用 Revit 2023</td></tr>
-          <tr data-who="2"><td class="d mono">11/19（四）</td><td class="t mono">23:59</td><td><span class="chip c2">②</span></td><td>完成進度報告 PDF＋rvt；rvt 交①當主檔</td></tr>
+          <tr data-who="1 2 3 4 5"><td class="d mono">11/18（三）起</td><td class="t mono"></td><td><span class="chip call">全員</span></td><td>記錄 AI 使用；全員用 Revit 2024</td></tr>
+          <tr data-who="2"><td class="d mono">11/19（四）</td><td class="t mono">23:59</td><td><span class="chip c2">②</span></td><td>完成進度報告 PDF＋rvt，並替①先建好簡化外形；rvt 交①當主檔（已完成）</td></tr>
           <tr data-who="2"><td class="d mono">11/20（五）</td><td class="t mono">17:00 前</td><td><span class="chip c2">②</span></td><td>上傳 FinalProgress_Group4.pdf 並回查</td></tr>
           <tr class="course" data-who="course"><td class="d mono">11/20（五）</td><td class="t mono">17:00</td><td><span class="chip cdue">課程</span></td><td>期末進度報告截止，不收遲交</td></tr>
           <tr data-who="5"><td class="d mono">11/21（六）</td><td class="t mono">12:00</td><td><span class="chip c5">⑤</span></td><td>圖面資料表 <span class="arrow">→</span> ①④</td></tr>
@@ -155,14 +155,14 @@ tr.course td.t{color:var(--due);font-weight:700}
         <h3><span class="chip c1">①</span>Revit 建模、2D 圖說及明細表</h3>
         <p>Revit 內的工作集中由①完成。依 A2-1（1F～4F 平面）、A2-2（地下室與屋頂平面）、⑤的圖面資料表及④的現況調查建模。</p>
         <div class="step"><p class="when">11月20日（五）起</p>
-          <p>接手②做好的進度報告 rvt 當模型主檔，繼續建模。</p></div>
+          <p>接手②做好的進度報告 rvt 當模型主檔，繼續建模。主檔裡②已做好：樓層、軸線、各層校正過的底圖、地形、正北、2 個剖面、基地配置圖、3D 和圖紙，以及簡化外形（各層外牆、樓板、屋頂、女兒牆、屋突）。</p></div>
         <div class="step"><p class="when">11月26日（四）23:59 前，交付「階段一模型」給⑤</p>
-          <p>在主檔上依④的現況調查更新樓高，並加上柱、樑、樓板、牆。尚未量到的尺寸先用估計值，並在工作 PDF 標明。</p></div>
+          <p>在主檔上依④的現況調查更新樓高，加上柱、樑，並依圖說修正外牆和樓板的類型與厚度（②建的是簡化版）。尚未量到的尺寸先用估計值，並在工作 PDF 標明。</p></div>
         <div class="step"><p class="when">12月3日（四）23:59 前，交付「完整模型 v1」給③④⑤②</p>
           <ul>
             <li>外牆門窗（依平面圖代號，開口尺寸要符合實際）</li>
-            <li>屋頂、天花板</li>
-            <li>外觀細部：雨遮、外凸窗、入口台階與欄杆、女兒牆、屋突、4F 溫室的玻璃與屋頂</li>
+            <li>天花板；屋頂、女兒牆、屋突依圖說修正（②已建簡化版）</li>
+            <li>外觀細部：雨遮、外凸窗、入口台階與欄杆、4F 溫室的玻璃與屋頂</li>
             <li>內牆及房間（供面積與 EUI 計算）</li>
             <li>每個構件都設定正確材料；柱、樑用結構類別</li>
             <li>匯出材料數量明細表、房間面積明細表（Excel）初版</li>
@@ -171,7 +171,7 @@ tr.course td.t{color:var(--due);font-weight:700}
         <div class="step"><p class="when">12月9日（三）23:59 前，依⑤的問題清單修正，交付給③④⑤②</p>
           <ul>
             <li>模型 v2</li>
-            <li>2D 圖說 PDF：各層結構平面圖、四向立面圖、看得到內部結構框架的剖面圖</li>
+            <li>2D 圖說 PDF：各層結構平面圖、四向立面圖、看得到內部結構框架的剖面圖（主檔已有 2 個剖面視圖和圖紙可沿用）</li>
             <li>最終明細表（Excel）</li>
             <li>3D 截圖：外觀至少 2 張、結構剖切 1 張</li>
             <li>本人的工作 PDF：依據哪些圖與量測、哪些尺寸是估計、修改了哪些地方，以及 AI 使用與驗證情況</li>
@@ -181,14 +181,14 @@ tr.course td.t{color:var(--due);font-weight:700}
 
       <article class="role" id="r2">
         <h3><span class="chip c2">②</span>統籌、最終整合、上傳及上台</h3>
-        <div class="step"><p class="when">11月19日（四）23:59 前，完成期末進度報告 PDF 及 rvt</p>
+        <div class="step"><p class="when">11月19日（四）完成期末進度報告 PDF 及 rvt（已完成）</p>
           <ul>
-            <li>用 Revit 2023 建檔</li>
-            <li>把 A2-1 的 1F～4F 平面、A2-2 的地下室與屋頂平面裁出，匯入對應樓層當底圖，用一段已知的軸線尺寸校正比例</li>
-            <li>軸線 1～6／A～D；樓層 B1、1F～4F、RF。樓高：B1→1F 380 cm（A2-2 剖面）；1F→2F、2F→3F 各 350 cm（樓梯 20 階 × 17.5 cm）；3F→4F、4F→RF 圖上不明確，先用 350 cm，並在 PDF 註明「估計，待現場量測更新」</li>
-            <li>各層平面視圖；地形照 Lab-HW4 的做法。圖上沒有基地方位與高程，正北方向與地形先參考課程網站的校園 ArcGIS 場景及現場，並在 PDF 註明</li>
-            <li>PDF 至少包含：各層平面（看得到軸線）、一張立面或剖面（看得到樓層線）、一張看得到地形的 3D 或基地圖</li>
-            <li>這份 rvt 交給①，當之後的模型主檔</li>
+            <li>用 Revit 2024 建檔</li>
+            <li>A2-1 的 1F～4F 平面、A2-2 的地下室與屋頂平面去歪斜後匯入對應樓層當底圖，依軸線校正，誤差 45 mm 以內</li>
+            <li>軸線 1～6／A～D；樓層 B1 −3800、1F ±0、2F +3500、3F +7000、4F +10750、RF +14250（mm）。B1→1F 380 cm（A2-2 剖面）；1F→2F、2F→3F 各 350 cm（樓梯 20 階 × 17.5 cm）；3F→4F 375 cm（4F 樓梯 21 階 × 17.85 cm）、4F→RF 350 cm（同標準層），這兩段在④現場量測後由①更新</li>
+            <li>各層平面視圖；地形（室外地面在 1F 下方 120 cm，地下室範圍開挖）；正北依衛星影像設定在軸線 1 側，由④現場核對</li>
+            <li>多做的部分：替①先建好簡化外形（各層外牆、樓板、屋頂、女兒牆、屋突），以及 2 個剖面、基地配置圖、3D 和圖紙</li>
+            <li>PDF 共 10 頁（封面與說明、B1～RF 平面、剖面、基地配置圖、3D）；rvt 交給①當之後的模型主檔</li>
           </ul></div>
         <div class="step"><p class="when">有機會時向助教確認以下問題，收到答覆就貼群組</p>
           <ul>
@@ -237,9 +237,9 @@ tr.course td.t{color:var(--due);font-weight:700}
         <p>建物建於 1990 年，官方清單註明立面、結構、門窗圖都缺；依課程建模準則，圖說超過兩年須現場勘察。</p>
         <div class="step"><p class="when">11月22日（日）23:59 前，交付「現況調查包」給①⑤②</p>
           <ul>
-            <li>四向立面照片（盡量正對拍）；能到的話，加拍屋頂；記下建物的正北方向</li>
+            <li>四向立面照片（盡量正對拍）；能到的話，加拍屋頂；記下建物的正北方向（模型目前設軸線 1 側朝北）</li>
             <li>外觀細部：雨遮、外凸窗、入口台階與欄杆、女兒牆、屋突，拍照並量主要尺寸</li>
-            <li>各層樓高（量測，或數階梯級數 × 級高）</li>
+            <li>各層樓高（量測，或數階梯級數 × 級高），特別是 3F→4F、4F→RF（模型目前用 375、350 cm），以及 1F 與室外地面的高差（圖上 120 cm）</li>
             <li>門窗：依⑤圖面資料表的代號清單（W1、W2、D1…）逐一量寬、高、窗台高；外牆門窗必量</li>
             <li>外露的柱、樑尺寸，外牆材料</li>
             <li>與平面圖不同的地方（加建、拆除、4F 溫室現況），以及房間名稱與用途現況（例如恆溫培養室，會影響 EUI）</li>
